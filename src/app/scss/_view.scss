@@ -1,0 +1,91 @@
+html, body, div {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+div #m-view > * {
+    @extend .border-box;
+}
+a {
+    color:$linkColor;
+    text-decoration: none;
+    &:hover {
+        color: $hoverColor;
+    }
+    &:visited {
+        color: $linkColor;
+    }
+}
+li{
+    display: inline;
+}
+body { 
+    font-family: $fontFamily;
+    font-size: 14px;
+    background-color: $appBackgroundColor;
+    color: $primaryTextColor;
+    overflow-x: hidden;
+}
+h1, .h1{
+    font-size: $h1;
+    text-transform: uppercase;
+    font-weight: $bold;
+    margin-bottom: 20px;
+}
+h3, .h3{
+    font-size: $h3;
+    font-weight: $bold;
+}
+h4, .h4{
+    font-size: $h4;
+    font-weight: $bold;
+}
+.wrapper{
+    max-width: $pageMaxWidth;
+    margin: 0 auto;
+    @if $isResponsive == false{
+        min-width: $pageMinWidth;
+    } 
+}
+.mat-menu-content {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.table-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    min-width: 300px;
+  }
+.box{
+      border: 1px solid $borderColor;
+      min-height: $boxHeight;
+  }
+.warning{
+    color:$colorWarn;
+  }
+.success{
+    color: $colorSuccess;
+}
+.loading{
+    min-height: 50vh;
+}
+.error {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    height: 220px;
+    font-weight: $bold;
+    color: $colorError;
+}
+.nc-icon-glyph {
+    position: relative;
+}
+.operator .queue:nth-of-type(2) {
+    cursor: default;
+    opacity: 0.6;
+    &:hover{
+        background-color: #f3fbff !important;
+    }
+}

@@ -1,0 +1,16 @@
+<div class="wrapper">
+<nav id="header">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div>
+            <a routerLink="/dashboard"><img class="logo" src="assets/images/logo.png" alt="Logo" title="Broadridge"></a>
+            <span class="caption brand-title">{{brand}}</span>
+        </div>
+        <div class="logout" *ngIf="userInfo">
+                <span id="username">{{userInfo.firstName + ' ' + userInfo.lastName}}</span> &#8212; <span id="role">{{userInfo.role}}</span>
+                <mat-divider [vertical]="true"></mat-divider>
+                <a [href]="userInfo.logoutUrl">Logout</a> 
+        </div>     
+            
+    </div>
+</nav>
+</div>  

@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-toolbar>{{title}}</mat-toolbar>
+    <div class="box">
+        <div class="table-container">
+            <mat-table #table [dataSource]="dataSource"
+                       matSort matSortActive="date" matSortDisableClear matSortDirection="asc">
+          
+              <ng-container matColumnDef="{{displayedColumns[0]}}">
+                <mat-header-cell *matHeaderCellDef fxFlex="20">Date/Timestamp</mat-header-cell>
+                <mat-cell *matCellDef="let row" fxFlex="20">{{ row.dateTime | date }}</mat-cell>
+              </ng-container>
+          
+              <ng-container matColumnDef="{{displayedColumns[1]}}">
+                <mat-header-cell *matHeaderCellDef fxFlex="30">User</mat-header-cell>
+                <mat-cell *matCellDef="let row" fxFlex="30">{{ row.userName | titlecase }}</mat-cell>
+              </ng-container>
+          
+              <ng-container matColumnDef="{{displayedColumns[2]}}">
+                <mat-header-cell *matHeaderCellDef>Note</mat-header-cell>
+                <mat-cell *matCellDef="let row">{{ row.note }}</mat-cell>
+              </ng-container>
+          
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+          </div>
+          <div class="inner-card-wrapper">
+            <button mat-raised-button color="primary" (click)="addNote()">Add Note</button>
+          </div>
+      </div>
+</mat-card>

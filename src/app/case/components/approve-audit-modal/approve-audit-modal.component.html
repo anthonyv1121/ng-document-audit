@@ -1,0 +1,14 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="start center" class="modal-header">
+   CONFIRM {{isApproved()}} 
+  </mat-toolbar>
+  <mat-dialog-content>
+    <div *ngIf="submitted && !success"><mat-spinner></mat-spinner></div>
+    <div *ngIf="!submitted && !success">Are you sure you want to confirm {{isApproved()}}?</div>
+    <div *ngIf="success">{{isApproved()}} is confirmed.</div>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions fxLayout="row" fxLayoutAlign="end end">
+    <button mat-button mat-dialog-close [disabled]="submitted && !success">{{success ? 'Close' : 'No'}}</button>
+    <button mat-raised-button color="primary" cdkFocusInitial (click)="submitAudit()" [disabled]="submitted && !success" *ngIf="!success">Yes</button>
+  </mat-dialog-actions>
+  

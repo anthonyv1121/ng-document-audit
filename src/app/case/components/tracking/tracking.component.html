@@ -1,0 +1,33 @@
+
+<mat-card>
+    <h3>{{title}}</h3>
+    <div fxLayout="row" fxLayoutAlign="start center">
+             <div *ngIf="trackingSaved && !errorMsg" class="user-feedback">
+                Tracking is {{trackingUpdated ? 'updated.' : 'applied.' }}
+            </div>
+            <div *ngIf="!trackingSaved && trackingUpdated" class="user-feedback warning">
+                    You must click save to apply your changes.
+            </div>
+            <mat-spinner diameter="25" *ngIf="trackingSubmitted && !trackingSaved"></mat-spinner>
+    </div>
+    
+    
+    <div *ngIf="!errorMsg">{{errorMsg}}</div>
+        <form [formGroup]="trackingForm" *ngIf="!errorMsg && trackingInfo">
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="form-container">
+                    <mat-form-field>
+                        <mat-select formControlName="trackingMethod" [placeholder]="selectPlaceholder" (change)="onFieldChange()">
+                            <mat-option *ngFor="let option of selectOptions" [value]="option">{{option | titlecase}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field fxFlex="40" fxFlexOffset="10">
+                        <input formControlName="trackingReference" matInput [placeholder]="inputPlaceholder" (keyup)="onFieldChange()">
+                    </mat-form-field> 
+                </div>
+                <button mat-raised-button color="primary" [disabled]="(trackingForm.invalid || trackingSaved)" (click)="onSaveForm()">
+                    {{!trackingSaved ? 'Save' : 'Update'}}</button>
+            </div>
+        </form>
+</mat-card>
+<!-- *ngIf="trackingSubmitted && !trackingSaved" -->

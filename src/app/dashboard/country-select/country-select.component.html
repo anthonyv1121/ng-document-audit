@@ -1,0 +1,8 @@
+<div class="locations-picker" *ngIf="selected">
+    <span>LOCATIONS:</span>
+    <mat-form-field>
+      <mat-select [(value)]="selected" (change)="onChange()">
+        <mat-option *ngFor="let country of countries" [value]="country">{{country}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>

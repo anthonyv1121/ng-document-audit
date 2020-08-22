@@ -1,0 +1,78 @@
+// Colors
+$primaryColor: #007bb6; //#435e76;
+$primaryLightColor: #56aae9;
+$primaryDarkColor: #004f86;
+$primaryTextColor: #333;
+
+$secondaryColor: #ddd;
+$secondaryLightColor: #fff;
+$secondaryDarkColor: #999999;
+$secondaryTextColor: #fff;
+
+$goColor:#6aa84f;
+$alpha50:rgba(0,0,0,.50);
+
+$colorSuccess: #4cae4c;
+$colorInfo: #46b8da;
+$colorWarn: #eea236;
+$colorError: #d43f3a;
+
+// Element colors
+$windowBackgroundColor: #eee;
+$appBackgroundColor: #fff;
+$hoverColor: #4b95db;
+$linkColor: #007bb6;
+$borderColor: $secondaryColor;
+$breadcrumbColor: $secondaryDarkColor;
+$breadcrumbActive:#fff;
+$selectBorderColor: $secondaryDarkColor;
+$selectInverseBorderColor:rgba(255,255,255,.42);
+$dropDownArrowColor: rgba(255,255,225,.54);
+$formInputColor: rgba(0, 0, 0, 0.87); 
+
+$isResponsive: false;
+
+// dimensions
+$menuHeight: 45px;
+$appMinWidth: 368px;
+$appMaxWidth: 1280px;
+$pageMinWidth: 1190px;
+$pageMaxWidth: 1280px;
+$minHeight: 500px;
+$queueHeight: 210px;
+$boxHeight: 200px;
+$modalDialogHeight: 147px;
+
+// spacing
+$defaultSectionPadding:30px;
+$sectionSidePadding:25px;
+$sectionPadding:(
+    top:$defaultSectionPadding,
+    right:$sectionSidePadding,
+    bottom:40px,
+    left:$sectionSidePadding
+);
+
+// tables
+$tableHeight: 300px;
+$tableBorderColor: rgba(0,0,0,.2);
+$tableHeaderSize: 15px;
+$tableHeaderColor: rgba(0,0,0,.60);
+
+// fonts
+$fontFamily: Roboto,"Helvetica Neue",Arial,sans-serif, Nucleo;
+
+// font sizes:
+$h1:28px;
+$h2:22px;
+$h3:18px;
+$h4:15px;
+
+// font weights
+$bold: 900;
+$medium:700;
+$semi:500;
+
+@function overideStyle($prop, $style) {
+   $prop:$style
+}

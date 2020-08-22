@@ -1,0 +1,65 @@
+@import '../scss/variables';
+:host {
+	background-color: #fff;
+	display: block;
+	height: $menuHeight;
+	padding: 0 0 0 16px;
+	// box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+.logo {
+	position: relative;
+	top: 8px;
+}
+
+.logout {
+	padding: 12px 20px 0 ;
+	color: #666;
+	vertical-align: middle;
+	position: relative;
+	text-transform:uppercase;
+}
+
+.logout-icon {
+	padding-right: 8px;
+	color: #666;
+}
+
+// set IE specific settings using both of the valid values of the media query, so it will be parsed whether the user has high contrast enabled or not.
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	/* IE10+ CSS styles go here */
+	.logout {
+		vertical-align: baseline !important;
+	}
+}
+
+.brand-title {
+	border-left: 1px solid #acacac;
+	color: #666;
+	font-size: 18px;
+	margin-left: 6px;
+	top: 1px;
+	position: relative;
+	padding: 12px 6px 6px 12px;
+	font-weight: bold;
+}
+
+.ui-menu-list {
+	min-width: 0px !important;
+}
+
+.separator {
+	border-bottom: 2px solid #ddd;
+	margin: 12px 0px;
+}
+
+.m-t-6 {
+	margin-top: 6px;
+}
+.mat-divider{
+	display: inline;
+	margin: 0 10px;
+     &.mat-divider-vertical{
+        border-right-color: rgba(0,0,0,0.5);
+     }
+}
+

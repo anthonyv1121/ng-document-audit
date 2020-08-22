@@ -1,0 +1,45 @@
+@import '../scss/variables';
+
+.queue {
+    width: 30%;
+    text-align: center;
+    border: 1px solid $borderColor;
+    height: $queueHeight;
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:first-of-type {
+        background-color: $primaryColor;
+        color: #fff;
+
+        &:hover{
+            background-color: darken($primaryColor, 6%);
+        }
+    }
+    &:nth-of-type(2) {
+        background-color: lighten($primaryColor, 62%);
+
+        &:hover{
+            background-color: lighten($primaryColor, 58%);
+        }
+    }
+   
+    & > div:first-child {
+        position: absolute;
+        font-weight: $medium;
+        padding: 10px 0 0 7px;
+    }
+    & > div:nth-child(2) {
+        height: 100%;
+    }
+    &.total{
+        cursor: default;
+    }
+    .amount{
+        align-content: center;
+        font-weight: $bold;
+        font-size: 72px;
+        line-height: 72px;
+    }
+}

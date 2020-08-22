@@ -1,0 +1,28 @@
+<div *ngIf="dashboardError" class="error"><span>Error code: {{dashboardError.errorCode}}:</span> {{dashboardError.errorStatus}}</div>
+
+<m-page *ngIf="tabulatorCountries && !dashboardError">
+        <app-country-select [countries]="tabulatorCountries"></app-country-select>
+        <mat-card *ngFor="let tabulator of dashboardData; let i =index">
+          <div class="h1">{{ tabulator.name }}</div>
+      
+          <div fxLayout="row" fxLayoutAlign="space-between stretch">
+              <div *ngFor ="let q of tabulator['tabulatorInfo'][activeCountry]" class="queue" (click)="goToQueue(tabulator.name,q.priorityType)">
+                 <div fxLayout="column" fxLayoutAlign="start start">{{ q.priorityType | priorityType }}</div>
+      
+                 <div fxLayout="column" fxLayoutAlign="center center">
+                    <div class="amount">{{ q.totalCnt }}</div>
+                    <div>{{ tabulator.name }}</div>
+                 </div>     
+              </div>
+              <div class="queue total">
+                  <div fxLayout="column" fxLayoutAlign="start start">Total</div>
+                  <div fxLayout="column" fxLayoutAlign="center center">
+                      <div class="amount">{{ tabulator['tabulatorInfo'][activeCountry] | tabulatorTotal: 'totalCnt' }}</div>
+                      <div>{{ tabulator.name }}</div>
+                  </div>
+              </div>
+              
+          </div>
+        </mat-card>
+      <button (click)="logData()">Get Data</button>
+      </m-page>

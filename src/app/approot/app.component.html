@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <ng-container
+      *ngIf="userInfo || userServiceError; then responseReceived; else waiting">
+    </ng-container>
+
+    <ng-template #responseReceived>
+        <app-header [brand]="applicationName"  [userInfo]="userInfo" class="mat-elevation-z1"></app-header>
+
+        <div *ngIf="userServiceError" class="error"><span>Error code: {{userServiceError.errorCode}}:</span> {{userServiceError.errorStatus}}</div>
+
+        <div id="m-view" *ngIf="userInfo && !userServiceError" [ngClass]="userInfo.role.toLowerCase()">
+            <router-outlet></router-outlet>
+        </div>
+        
+    </ng-template> 
+
+    <ng-template #waiting>
+      <div  fxLayout="row" fxLayoutAlign="center center" class="loading">
+          <mat-spinner></mat-spinner>
+      </div>
+       
+    </ng-template>
+
+</div>  

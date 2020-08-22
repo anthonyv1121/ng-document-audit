@@ -1,0 +1,16 @@
+@import '../../scss/variables';
+
+.pageWrapper {
+
+	> h3 {
+		font-size: 22px;
+		font-weight: 100;
+	}
+
+	> div {
+		// width: calc(100vw - 65px);
+		max-width: $pageMaxWidth;
+		position: relative;
+		min-height: $minHeight;
+	}
+}

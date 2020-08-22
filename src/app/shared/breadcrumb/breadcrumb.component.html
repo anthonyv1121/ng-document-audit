@@ -1,0 +1,11 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" >
+  <ul class="breadcrumb">
+    <li *ngFor="let breadcrumb of breadcrumbs"class="breadcrumb-item">
+      <a [routerLink]="['/' + breadcrumb.url]" 
+         [queryParams]="breadcrumb.query"
+         routerLinkActive="active">{{ breadcrumb.label | removeDashes }}</a>
+      <span class="caret" *ngIf="breadcrumbs.length > 1 && breadcrumbs.indexOf(breadcrumb) !== breadcrumbs.length-1 ">&rsaquo;</span>
+    </li>
+    <span *ngIf="isRejected" class="rejected">{{rejectedLabel}}</span>
+  </ul>
+</div>

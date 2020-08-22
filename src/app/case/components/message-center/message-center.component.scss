@@ -1,0 +1,20 @@
+@import '../../../scss/variables';
+:host{
+    margin-bottom: 30px;
+}
+.box{
+    border-top:none;
+
+    & > div:not(.table-container){
+        padding: 0 $sectionSidePadding 20px;
+    }
+}
+.table-container{
+    padding: $defaultSectionPadding map-get($sectionPadding, right) 20px;
+}
+mat-row{
+    &:hover{
+      background-color: rgba($color: #000, $alpha: 0.03)
+    }
+  }
+

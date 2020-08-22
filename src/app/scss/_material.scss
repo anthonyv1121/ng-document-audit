@@ -1,0 +1,183 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$custom-primary-palette: (
+	200: $primaryLightColor,
+	500: $primaryColor,
+	800: $primaryDarkColor,
+	contrast: (
+	  200: $black-87-opacity,
+	  500: $primaryTextColor,
+	  800: $white-87-opacity
+	)
+);
+
+$custom-accent-palette: (
+	200: $secondaryLightColor,
+	500: $secondaryColor,
+	800: $secondaryDarkColor,
+	contrast: (
+	  200: $primaryTextColor,
+	  500: $primaryTextColor,
+	  800: $primaryTextColor
+	)
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://www.google.com/design/spec/style/color.html
+$custom-primary: mat-palette($custom-primary-palette, 500, 200, 800);
+$custom-accent:  mat-palette($custom-accent-palette, 500, 200, 800);
+
+// The warn palette is optional (defaults to red).
+$custom-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$custom-theme: mat-light-theme($custom-primary, $custom-accent, $custom-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($custom-theme);
+
+
+
+$radioRadius: 16px;
+.mat-radio-outer-circle,
+.mat-radio-inner-circle {
+	width: $radioRadius !important;
+	height: $radioRadius !important;
+	top: calc((100% - 16px) / 2) !important;	// set radius explicitly (variable doesn't work)
+	left: calc((100% - 16px) / 2) !important;	// set radius explicitly (variable doesn't work)
+}
+
+
+/* Custom material styles for this app*/
+
+/* Select Styles */
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: $primaryColor;
+}
+.locations-picker{
+    .mat-select-value-text span.ng-star-inserted {
+        font-size: 16px;
+    }
+}
+.mat-form-field-type-mat-select{
+    .mat-form-field-underline {
+        background-color: $selectBorderColor;
+    }
+}
+.locations-picker {
+    .mat-form-field-type-mat-select{
+        .mat-form-field-underline {
+            position: static;
+            background-color: $selectInverseBorderColor;
+        }
+    }
+    .mat-select-arrow {
+        color: $dropDownArrowColor;
+    }
+    .mat-select-value-text span.ng-star-inserted {
+        color: #fff;
+    }
+    .mat-form-field.mat-focused.mat-primary .mat-select-arrow{
+        color: $dropDownArrowColor;
+    }
+}
+.form-container{
+    .mat-form-field-hide-placeholder .mat-select-placeholder,
+    .mat-form-field-hide-placeholder .mat-input-element::placeholder,
+    .mat-form-field-hide-placeholder .mat-input-element::-webkit-input-placeholder{
+        color: $formInputColor !important;
+    }
+}
+
+
+/* Button Styles */
+mat-card, .mat-dialog-container {
+    .mat-raised-button:not([class*=mat-elevation-z]), 
+    .mat-button{
+        height: 30px;
+        line-height: 30px;
+    }
+    .mat-raised-button:not([class*=mat-elevation-z]){
+        height: 30px;
+        line-height: 30px;
+        color: $secondaryTextColor;
+        box-shadow:none;
+    }
+}
+
+/* Card Styles*/
+mat-card{
+    margin-bottom: 40px;
+
+    &.mat-card{
+        padding: map-get($sectionPadding, top)
+                 map-get($sectionPadding, right);
+        
+        &:not([class*=mat-elevation-z]){
+            @extend .box-shadow;
+        }
+        & > h3{
+            padding: 0 0 20px;
+        }
+    }  
+
+    .mat-paginator-container{
+        padding: 0;
+    }
+    .mat-paginator-page-size-label{
+        margin: 0;
+    }
+}
+
+/* Table Styles*/
+.mat-table {
+    overflow: auto;
+    max-height:$tableHeight;
+    border: 1px solid $tableBorderColor;
+
+    .mat-header-cell {
+        color: $tableHeaderColor;
+        font-size: $tableHeaderSize;
+        font-weight: $medium;
+    }
+    .mat-header-row, .mat-row{
+        border-color: $tableBorderColor;
+    }
+  }
+/* toolbar */
+.mat-toolbar {
+    background: $primaryColor;
+    color: #fff;
+    font-size: $h3;
+    text-transform: uppercase;
+}
+/* modals */
+.cdk-overlay-container {
+    .mat-dialog-container{
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+    .mat-dialog-content,
+    .mat-dialog-actions{
+        padding: 24px;
+        margin: 0;
+    }
+    .mat-dialog-actions {
+        border-top: 1px solid $alpha50;
+    }
+    .mat-progress-spinner{
+        margin: 0 auto;
+    }
+}
+#cdk-overlay-0.cdk-overlay-pane{
+    max-width: none;
+}
+/* TextArea */
+textarea.mat-input-element{
+    height:100px;
+}

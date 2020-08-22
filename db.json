@@ -1,0 +1,872 @@
+{
+  "getDashboardInfo": {
+    "results": {
+      "tabulatorCountries": [
+        "US",
+        "UK",
+        "ALL"
+      ],
+      "tabulator": [
+        {
+          "name": "urgent",
+          "tabulatorInfo": [
+            {
+              "priorityType": "new",
+              "countryCd": "All",
+              "totalCnt": "4"
+            },
+            {
+              "priorityType": "audit",
+              "countryCd": "All",
+              "totalCnt": "8"
+            },
+            {
+              "priorityType": "new",
+              "countryCd": "US",
+              "totalCnt": "8"
+            },
+            {
+              "priorityType": "audit",
+              "countryCd": "US",
+              "totalCnt": "4"
+            },
+            {
+              "priorityType": "new",
+              "countryCd": "UK",
+              "totalCnt": "5"
+            },
+            {
+              "priorityType": "audit",
+              "countryCd": "UK",
+              "totalCnt": "3"
+            }
+          ]
+        },
+        {
+          "name": "non-urgent",
+          "tabulatorInfo": [
+            {
+              "priorityType": "new",
+              "countryCd": "All",
+              "totalCnt": "14"
+            },
+            {
+              "priorityType": "audit",
+              "countryCd": "All",
+              "totalCnt": "12"
+            },
+            {
+              "priorityType": "new",
+              "countryCd": "US",
+              "totalCnt": "4"
+            },
+            {
+              "priorityType": "audit",
+              "countryCd": "US",
+              "totalCnt": "2"
+            },
+            {
+              "priorityType": "new",
+              "countryCd": "UK",
+              "totalCnt": "50"
+            },
+            {
+              "priorityType": "audit",
+              "countryCd": "UK",
+              "totalCnt": "19"
+            }
+          ]
+        },
+        {
+          "name": "unclassified",
+          "tabulatorInfo": [
+            {
+              "priorityType": "new",
+              "countryCd": "All",
+              "totalCnt": "99"
+            },
+            {
+              "priorityType": "audit",
+              "countryCd": "All",
+              "totalCnt": "12"
+            },
+            {
+              "priorityType": "new",
+              "countryCd": "US",
+              "totalCnt": "6"
+            },
+            {
+              "priorityType": "audit",
+              "countryCd": "US",
+              "totalCnt": "2"
+            },
+            {
+              "priorityType": "new",
+              "countryCd": "UK",
+              "totalCnt": "1"
+            },
+            {
+              "priorityType": "audit",
+              "countryCd": "UK",
+              "totalCnt": "2"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "getDashboardInfo-old": {
+    "results": {
+      "tabulatorCountries": [
+        "US",
+        "UK",
+        "ALL"
+      ],
+      "rejectedMeetingCount": "1",
+      "tabulator": [
+        {
+          "name": "urgent",
+          "tabulatorInfo": {
+            "all": [
+              {
+                "priorityType": "new",
+                "totalCnt": 8,
+                "countryCd": "All"
+              },
+              {
+                "priorityType": "audit",
+                "totalCnt": 4,
+                "countryCd": "All"
+              }
+            ],
+            "us": [
+              {
+                "priorityType": "new",
+                "totalCnt": 4,
+                "countryCd": "US"
+              },
+              {
+                "priorityType": "audit",
+                "totalCnt": 2,
+                "countryCd": "US"
+              }
+            ],
+            "uk": [
+              {
+                "priorityType": "new",
+                "totalCnt": 5,
+                "countryCd": "UK"
+              },
+              {
+                "priorityType": "audit",
+                "totalCnt": 3,
+                "countryCd": "UK"
+              }
+            ]
+          }
+        },
+        {
+          "name": "non-urgent",
+          "tabulatorInfo": {
+            "all": [
+              {
+                "priorityType": "new",
+                "totalCnt": 14,
+                "countryCd": "all"
+              },
+              {
+                "priorityType": "audit",
+                "totalCnt": 12,
+                "countryCd": "all"
+              }
+            ],
+            "us": [
+              {
+                "priorityType": "new",
+                "totalCnt": 4,
+                "countryCd": "US"
+              },
+              {
+                "priorityType": "audit",
+                "totalCnt": 2,
+                "countryCd": "US"
+              }
+            ],
+            "uk": [
+              {
+                "priorityType": "new",
+                "totalCnt": 4,
+                "countryCd": "UK"
+              },
+              {
+                "priorityType": "audit",
+                "totalCnt": 2,
+                "countryCd": "UK"
+              }
+            ]
+          }
+        },
+        {
+          "name": "unclassified",
+          "tabulatorInfo": {
+            "all": [
+              {
+                "priorityType": "new",
+                "totalCnt": 99,
+                "countryCd": "all"
+              },
+              {
+                "priorityType": "audit",
+                "totalCnt": 12,
+                "countryCd": "all"
+              }
+            ],
+            "us": [
+              {
+                "priorityType": "new",
+                "totalCnt": 6,
+                "countryCd": "US"
+              },
+              {
+                "priorityType": "audit",
+                "totalCnt": 2,
+                "countryCd": "US"
+              }
+            ],
+            "uk": [
+              {
+                "priorityType": "new",
+                "totalCnt": 1,
+                "countryCd": "UK"
+              },
+              {
+                "priorityType": "audit",
+                "totalCnt": 2,
+                "countryCd": "UK"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "errors": {},
+    "totalRecords": {},
+    "role": "Operator"
+  },
+  "getTabulatorByPriority_urgent_new": {
+    "input": {
+      "priorityType": "new",
+      "queueType": "Urgent",
+      "roleType": "Operator"
+    },
+    "result": {
+      "tabulator": [
+        {
+          "rowNumber": "1",
+          "tabulatorName": "UK tabuloatr 03/21/2016 12 AM",
+          "numOfCard": 18,
+          "status": "Rejected",
+          "tabulatorId": "1234567"
+        },
+        {
+          "rowNumber": "2",
+          "tabulatorName": "Capita 21/03/2016 12 AM",
+          "numOfCard": 6,
+          "status": "Rejected",
+          "tabulatorId": "789456123"
+        },
+        {
+          "rowNumber": "3",
+          "tabulatorName": "computer Share 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "new",
+          "tabulatorId": "369852147"
+        }
+      ]
+    },
+    "errors": [],
+    "totalRecords": {}
+  },
+  "getTabulatorByPriority_urgent_audit": {
+    "input": {
+      "priorityType": "audit",
+      "queueType": "Urgent",
+      "roleType": "Operator"
+    },
+    "result": {
+      "tabulator": [
+        {
+          "rowNumber": "1",
+          "tabulatorName": "Equiniti tabuloatr 03/21/2016 12 AM",
+          "numOfCard": 18,
+          "status": "Rejected",
+          "tabulatorId": "741258963"
+        },
+        {
+          "rowNumber": "2",
+          "tabulatorName": "Apple Computers 21/03/2016 12 AM",
+          "numOfCard": 6,
+          "status": "Rejected",
+          "tabulatorId": "7744885599"
+        },
+        {
+          "rowNumber": "3",
+          "tabulatorName": "NY Share 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "Pending audit",
+          "tabulatorId": "332211665544"
+        },
+        {
+          "rowNumber": "4",
+          "tabulatorName": "Equiniti tabuloatr 03/21/2016 12 AM",
+          "numOfCard": 18,
+          "status": "Pending audit",
+          "tabulatorId": "741258963"
+        },
+        {
+          "rowNumber": "5",
+          "tabulatorName": "Dell Computers 21/03/2016 12 AM",
+          "numOfCard": 6,
+          "status": "new",
+          "tabulatorId": "7744885599"
+        },
+        {
+          "rowNumber": "6",
+          "tabulatorName": "Company Share 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "new",
+          "tabulatorId": "332211665544"
+        }
+      ]
+    },
+    "errors": [],
+    "totalRecords": {}
+  },
+  "getTabulatorByPriority_non-urgent_new": {
+    "input": {
+      "priorityType": "new",
+      "queueType": "Non Urgent",
+      "roleType": "Operator"
+    },
+    "result": {
+      "tabulator": [
+        {
+          "rowNumber": "1",
+          "tabulatorName": "Equiniti 21/03/16 4PM",
+          "numOfCard": 18,
+          "status": "new",
+          "tabulatorId": "1122335588"
+        },
+        {
+          "rowNumber": "2",
+          "tabulatorName": "Capital Bank 21/03/2016 12 AM",
+          "numOfCard": 6,
+          "status": "new",
+          "tabulatorId": "951357852"
+        },
+        {
+          "rowNumber": "3",
+          "tabulatorName": "Broadridge Financial 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "new",
+          "tabulatorId": "7755332255"
+        },
+        {
+          "rowNumber": "4",
+          "tabulatorName": "Apple Computer 21/03/16 4PM",
+          "numOfCard": 18,
+          "status": "new",
+          "tabulatorId": "741963456"
+        },
+        {
+          "rowNumber": "5",
+          "tabulatorName": "Microsoft 21/03/2016 12 AM",
+          "numOfCard": 6,
+          "status": "new",
+          "tabulatorId": "159875365"
+        },
+        {
+          "rowNumber": "6",
+          "tabulatorName": "Telsa 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "new",
+          "tabulatorId": "753698754"
+        }
+      ]
+    },
+    "errors": [],
+    "totalRecords": {}
+  },
+  "getTabulatorByPriority_non-urgent_audit": {
+    "input": {
+      "priorityType": "audit",
+      "queueType": "Non Urgent",
+      "roleType": "Operator"
+    },
+    "result": {
+      "tabulator": [
+        {
+          "rowNumber": "1",
+          "tabulatorName": "Amazon 03/21/2016 12 AM",
+          "numOfCard": 18,
+          "status": "Rejected",
+          "tabulatorId": "0011225566"
+        },
+        {
+          "rowNumber": "2",
+          "tabulatorName": "TD Bank 21/03/2016 12 AM",
+          "numOfCard": 6,
+          "status": "Rejected",
+          "tabulatorId": "123654563"
+        },
+        {
+          "rowNumber": "3",
+          "tabulatorName": "NY Share 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "Pending audit",
+          "tabulatorId": "741258852"
+        },
+        {
+          "rowNumber": "4",
+          "tabulatorName": "UK new 03/21/2016 12 AM",
+          "numOfCard": 18,
+          "status": "Pending audit",
+          "tabulatorId": "0011225566"
+        },
+        {
+          "rowNumber": "5",
+          "tabulatorName": "Dell Computers 21/03/2016 12 AM",
+          "numOfCard": 6,
+          "status": "Pending audit",
+          "tabulatorId": "123654563"
+        },
+        {
+          "rowNumber": "6",
+          "tabulatorName": "Apple Computers 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "Pending audit",
+          "tabulatorId": "741258852"
+        }
+      ]
+    },
+    "errors": [],
+    "totalRecords": {}
+  },
+  "getTabulatorByPriority_unclassified_new": {
+    "input": {
+      "priorityType": "new",
+      "queueType": "Unclassified",
+      "roleType": "Operator"
+    },
+    "result": {
+      "tabulator": [
+        {
+          "rowNumber": "1",
+          "tabulatorName": "Capital One 21/03/2016 12 AM",
+          "numOfCard": 18,
+          "status": "Rejected",
+          "tabulatorId": "32659874"
+        },
+        {
+          "rowNumber": "2",
+          "tabulatorName": "UK tabuloatr 03/21/2016 12 AM",
+          "numOfCard": 6,
+          "status": "Rejected",
+          "tabulatorId": "11445522"
+        },
+        {
+          "rowNumber": "3",
+          "tabulatorName": "Microsoft 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "new",
+          "tabulatorId": "333336665"
+        },
+        {
+          "rowNumber": "4",
+          "tabulatorName": "UK Company 03/21/2016 12 AM",
+          "numOfCard": 18,
+          "status": "new",
+          "tabulatorId": "32659874"
+        },
+        {
+          "rowNumber": "5",
+          "tabulatorName": "Apple Bank 21/03/2016 12 AM",
+          "numOfCard": 6,
+          "status": "new",
+          "tabulatorId": "11445522"
+        },
+        {
+          "rowNumber": "6",
+          "tabulatorName": "UK Bank 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "new",
+          "tabulatorId": "333336665"
+        },
+        {
+          "rowNumber": "7",
+          "tabulatorName": "Microsoft 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "new",
+          "tabulatorId": "333336665"
+        },
+        {
+          "rowNumber": "8",
+          "tabulatorName": "UK Company 03/21/2016 12 AM",
+          "numOfCard": 18,
+          "status": "new",
+          "tabulatorId": "32659874"
+        },
+        {
+          "rowNumber": "9",
+          "tabulatorName": "Apple Bank 21/03/2016 12 AM",
+          "numOfCard": 6,
+          "status": "new",
+          "tabulatorId": "11445522"
+        },
+        {
+          "rowNumber": "10",
+          "tabulatorName": "France Bank 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "new",
+          "tabulatorId": "333336665"
+        }
+      ]
+    },
+    "errors": [],
+    "totalRecords": {}
+  },
+  "getTabulatorByPriority_unclassified_audit": {
+    "input": {
+      "priorityType": "audit",
+      "queueType": "Unclassified",
+      "roleType": "Operator"
+    },
+    "result": {
+      "tabulator": [
+        {
+          "rowNumber": "1",
+          "tabulatorName": "Broadridge Financial 03/21/2016 12 AM",
+          "numOfCard": 18,
+          "status": "Rejected",
+          "tabulatorId": "999666335"
+        },
+        {
+          "rowNumber": "2",
+          "tabulatorName": "NY Capital Bank 21/03/2016 12 AM",
+          "numOfCard": 6,
+          "status": "Rejected",
+          "tabulatorId": "555224782"
+        },
+        {
+          "rowNumber": "3",
+          "tabulatorName": "TD Share 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "Pending audit",
+          "tabulatorId": "111222333"
+        },
+        {
+          "rowNumber": "4",
+          "tabulatorName": "Microsoft 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "Pending audit",
+          "tabulatorId": "333336665"
+        },
+        {
+          "rowNumber": "5",
+          "tabulatorName": "Apple Company 03/21/2016 12 AM",
+          "numOfCard": 18,
+          "status": "Pending audit",
+          "tabulatorId": "32659874"
+        },
+        {
+          "rowNumber": "6",
+          "tabulatorName": "NY Bank 21/03/2016 12 AM",
+          "numOfCard": 6,
+          "status": "Pending audit",
+          "tabulatorId": "11445522"
+        },
+        {
+          "rowNumber": "7",
+          "tabulatorName": "Amazon Bank 21/03/2016 12 AM",
+          "numOfCard": 10,
+          "status": "Pending audit",
+          "tabulatorId": "333336665"
+        }
+      ]
+    },
+    "errors": [],
+    "totalRecords": {}
+  },
+  "getTabulatorDetailsByTabId": {
+    "input": "32659874",
+    "result": {
+      "meetings": [
+        {
+          "meetingID": "590837",
+          "issuerName": "BEA Systems",
+          "deadlineDate": "03/21/16 10:00",
+          "numOfCard": "4",
+          "tabulatorMeetingID": "123456789"
+        },
+        {
+          "meetingID": "602864",
+          "issuerName": "GKS",
+          "deadlineDate": "03/21/16 10:00",
+          "numOfCard": "5",
+          "tabulatorMeetingID": "2255886699"
+        },
+        {
+          "meetingID": "602895",
+          "issuerName": "BP PLC",
+          "deadlineDate": "03/21/16 10:00",
+          "numOfCard": "6",
+          "tabulatorMeetingID": "987654321"
+        },
+        {
+          "meetingID": "613645",
+          "issuerName": "Aviva PLC",
+          "deadlineDate": "03/21/16 14:00",
+          "numOfCard": "4",
+          "tabulatorMeetingID": "000005252"
+        },
+        {
+          "meetingID": "741852",
+          "issuerName": "GKS",
+          "deadlineDate": "03/21/16 10:00",
+          "numOfCard": "2",
+          "tabulatorMeetingID": "69636935852"
+        },
+        {
+          "meetingID": "852852",
+          "issuerName": "XP XLC",
+          "deadlineDate": "03/21/16 10:00",
+          "numOfCard": "3",
+          "tabulatorMeetingID": "987654321"
+        }
+      ],
+      "trackingInfo": {
+        "trackingMethod": "email",
+        "trackingReference": "1234568910530111"
+      },
+      "errors": {}
+    }
+  },
+  "getTabulatorDetailsByTabId_tracking": {
+    "input": "789456123",
+    "result": {
+      "meetings": [
+        {
+          "meetingID": "590837",
+          "issuerName": "BEA Systems",
+          "deadlineDate": "03/21/16 10:00",
+          "numOfCard": "4",
+          "tabulatorMeetingID": "123456789"
+        },
+        {
+          "meetingID": "590838",
+          "issuerName": "GKS",
+          "deadlineDate": "03/21/16 10:00",
+          "numOfCard": "2",
+          "tabulatorMeetingID": "2255886699"
+        },
+        {
+          "meetingID": "590839",
+          "issuerName": "BP PLC",
+          "deadlineDate": "03/21/16 10:00",
+          "numOfCard": "3",
+          "tabulatorMeetingID": "987654321"
+        }
+      ],
+      "trackingInfo": {
+        "trackingMethod": "post",
+        "trackingReference": "Last licks"
+      },
+      "errors": {}
+    }
+  },
+  "getTabulatorNotesByTabId": {
+    "input": {
+      "tabulatorId": "321654789"
+    },
+    "result": {
+      "notes": [
+        {
+          "dateTime": 1522708184190,
+          "userName": "anthony",
+          "note": "Blah blah. Lorem ipsum dolor sit amet, ut saepe decore appetere vis. Porro nemore nec eu, vix eu dicant alterum antiopam."
+        },
+        {
+          "dateTime": 1492401600000,
+          "userName": "user-xyz",
+          "note": "Quo ea dicant quodsi, no rebum minim liber mei, essent denique salutandi duo ne."
+        },
+        {
+          "dateTime": 1522708408182,
+          "userName": "mp-user",
+          "note": "Duo ne ornatus accommodare, nec tation tamquam eripuit et. Vel idque luptatum eleifend id, pro ut summo graeco graecis."
+        },
+        {
+          "dateTime": 1522711898014,
+          "userName": "mp-user",
+          "note": "Mutat tincidunt comprehensam ad mel, commodo dignissim eu nam."
+        },
+        {
+          "dateTime": 1522708184190,
+          "userName": "user B",
+          "note": "Lorem ipsum dolor sit amet, ut saepe decore appetere vis. Porro nemore nec eu, vix eu dicant alterum antiopam."
+        },
+        {
+          "dateTime": 1522708200884,
+          "userName": "ABC",
+          "note": "Quo ea dicant quodsi, no rebum minim liber mei, essent denique salutandi duo ne."
+        },
+        {
+          "dateTime": 1522708408182,
+          "userName": "mp-user",
+          "note": "Duo ne ornatus accommodare, nec tation tamquam eripuit et. Vel idque luptatum eleifend id, pro ut summo graeco graecis."
+        },
+        {
+          "dateTime": 1522711898014,
+          "userName": "My-User",
+          "note": "Mutat tincidunt comprehensam ad mel, commodo dignissim eu nam."
+        }
+      ]
+    },
+    "errors": [],
+    "totalRecords": {}
+  },
+  "saveTabulatorNotesByTabId": {
+    "input": {
+      "note": {
+        "dateTime": 1526477281703,
+        "userName": "Andrew Scott",
+        "note": "reerere"
+      },
+      "tabulatorId": "32659874"
+    },
+    "response": {
+      "code": "0",
+      "response": "Success"
+    }
+  },
+  "getMeetingCardDetails": {
+    "input": {
+      "tabulatorMeetingID": "123456791"
+    },
+    "result": {
+      "meetings": [
+        {
+          "cardNo": "1",
+          "nomineedName": "Aurora Nominees Ltd",
+          "settlementOwnerCode": "AA011",
+          "settlementOwnerAccount": "OM02"
+        },
+        {
+          "cardNo": "2",
+          "nomineedName": "Aurora Nominees Ltd",
+          "settlementOwnerCode": "AA012",
+          "settlementOwnerAccount": "OM04"
+        },
+        {
+          "cardNo": "3",
+          "nomineedName": "Aurora Nominees Ltd",
+          "settlementOwnerCode": "AA013",
+          "settlementOwnerAccount": "OM06"
+        },
+        {
+          "cardNo": "4",
+          "nomineedName": "HSBC Global Custody Nominee UK Limited",
+          "settlementOwnerCode": "AFQAQ",
+          "settlementOwnerAccount": "2162515"
+        },
+        {
+          "cardNo": "5",
+          "nomineedName": "Aurora Nominees Ltd",
+          "settlementOwnerCode": "AA012",
+          "settlementOwnerAccount": "OM04"
+        },
+        {
+          "cardNo": "6",
+          "nomineedName": "Aurora Nominees Ltd",
+          "settlementOwnerCode": "AA013",
+          "settlementOwnerAccount": "OM06"
+        }
+      ]
+    },
+    "errors": {
+      "errorCode": 999,
+      "errorStatus": "Meeting card details is not available at this time"
+    },
+    "totalRecords": {}
+  },
+  "loadConfig": {
+    "input": {},
+    "result": {
+      "config": {
+        "logoutUrl": "https://sso-dev/logout.asp?a=xtz",
+        "firstName": "Andrew",
+        "lastName": "Scott",
+        "role": "Operator"
+      }
+    },
+    "error": {},
+    "totalRecords": {}
+  },
+  "apiname": {
+    "input": {
+      "priorityType": "new"
+    },
+    "result": {},
+    "totalRecords": "100"
+  },
+  "submitaudit": {
+    "tabulatorId": "333336665"
+  },
+  "confirmaudit": {
+    "status": "Rejection",
+    "meetings": [
+      {
+        "meetingID": "590837",
+        "issuerName": "BEA Systems",
+        "deadlineDate": "03/21/16 10:00",
+        "numOfCard": "4",
+        "tabulatorMeetingID": "123456789"
+      },
+      {
+        "meetingID": "602864",
+        "issuerName": "GKS",
+        "deadlineDate": "03/21/16 10:00",
+        "numOfCard": "5",
+        "tabulatorMeetingID": "2255886699"
+      },
+      {
+        "meetingID": "602895",
+        "issuerName": "BP PLC",
+        "deadlineDate": "03/21/16 10:00",
+        "numOfCard": "6",
+        "tabulatorMeetingID": "987654321"
+      },
+      {
+        "meetingID": "613645",
+        "issuerName": "Aviva PLC",
+        "deadlineDate": "03/21/16 14:00",
+        "numOfCard": "4",
+        "tabulatorMeetingID": "000005252"
+      },
+      {
+        "meetingID": "741852",
+        "issuerName": "GKS",
+        "deadlineDate": "03/21/16 10:00",
+        "numOfCard": "2",
+        "tabulatorMeetingID": "69636935852"
+      },
+      {
+        "meetingID": "852852",
+        "issuerName": "XP XLC",
+        "deadlineDate": "03/21/16 10:00",
+        "numOfCard": "3",
+        "tabulatorMeetingID": "987654321"
+      }
+    ]
+  }
+}

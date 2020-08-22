@@ -1,0 +1,39 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="start center" class="modal-header">
+    {{header}}
+  </mat-toolbar>
+  <mat-dialog-content>
+      <ng-container *ngIf="auditSubmitted; then submitted; else confirmAudit"> </ng-container>
+     
+      <ng-template #submitted>
+          <mat-spinner fxLayout="row" fxLayoutAlign="center center" *ngIf="!auditSuccess && !errorMsg"></mat-spinner>
+          <div *ngIf="auditSuccess">
+              <p><i class="nc-icon-glyph lg ui-1_check-circle-08 success"></i> {{successMsg.success}}</p><br><br>
+              <p>{{successMsg.redirect}}</p>
+          </div>
+          <div *ngIf="errorMsg">{{errorMsg.errorCode}}: {{errorMsg.errorStatus}}</div>
+      </ng-template>
+
+      <ng-template #confirmAudit>
+          <div *ngIf="!trackingSaved" class="warning"><i class="nc-icon-glyph lg ui-2_alert-circle-"> </i> <span>{{noTrackingMsg}}</span><br><br></div>
+           {{confirmMsg}}
+
+          <div class="tracking-box" *ngIf="trackingSaved">
+            <h4>Tracking Information</h4>
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <span>Tracking Method:</span>
+                <span>{{trackingInfo.trackingMethod}}</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <span>Tracking Reference:</span>
+                <span>{{trackingInfo.trackingReference}}</span>
+            </div>
+          </div>  
+      </ng-template>
+  
+  </mat-dialog-content>
+  
+  <mat-dialog-actions fxLayout="row" fxLayoutAlign="end end">
+    <button mat-button mat-dialog-close [disabled]="auditSubmitted && !auditSuccess">{{!auditSuccess ? 'No' : 'Close'}}</button>
+    <button mat-raised-button color="primary" cdkFocusInitial (click)="onSubmitAudit()" [disabled]="auditSubmitted" *ngIf="!auditSuccess">Yes</button>
+  </mat-dialog-actions>
+  

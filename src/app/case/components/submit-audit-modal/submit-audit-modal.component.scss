@@ -1,0 +1,20 @@
+@import '../../../scss/variables';
+.tracking-box{
+    background-color: $windowBackgroundColor;
+    padding: 15px 15px 8px;
+    margin-top: 20px;
+    color: #666;
+
+    span{
+        margin-bottom: 7px;
+        &:first-child{
+            width: 35%;
+        }
+    }
+}
+h4 {
+    margin-bottom: 15px;
+}
+.mat-dialog-content{
+    height: $modalDialogHeight
+}
